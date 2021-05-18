@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 số đầu dãy Fibonacci</title>
+</head>
+<h1> 20 số đầu trong dã Fibonacci là </h1>
+<body>
+<script>
+    let a = 0 , b= 0, c=0
+    let f = "";
+    for (let i=0; i<=20;i++){
+        if(i==0){
+            a=1
+            c=1
+            f += a+ " "
+        }else{
+
+            a= b+c
+            b = c
+            c = a
+            f += a+ " "
+            console.log(i +" = "+a)
+        }
+    document.write( i + '=' + a + '<br>')
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button id="an" onclick="anvao()">Chơi</button>
+<input type="button" id="an1" style="display:none" onclick="choilai()">
+<h1 id="win"></h1>
+<script>
+    let win = document.getElementById("win") ;
+    let an = document.getElementById("an") ;
+    let an1 = document.getElementById("an1")
+  function anvao() {
+      let count = 0 ;
+    let nhapvao1 = prompt("Bạn muốn đoán từ đâu ?" , "") ;
+    let nhapvao2 = prompt("Bạn muốn đoán đến đâu ?", "") ;
+    let random = Math.floor(Math.random() * (nhapvao2-nhapvao1+1)+nhapvao1);
+    while ( count < 3) {
+        let ans = parseInt(prompt("Hãy đoán xem : " , ""));
+        if ( random === ans ) {
+            win.innerHTML = "Chúc mừng bạn !" ;
+            an.style.display = 'none' ;
+            an1.style.display = 'block' ;
+            break;
+        }else {
+            if ( ans > random ) {
+                alert('Bạn đã đoán sai')
+            }else {
+                alert('Bạn đã đoán sai')
+            }
+            count += 1;
+        }
+    }
+    }
+    function choilai() {
+        win.innerHTML = "<br>" ;
+        an.style.display = 'block' ;
+        an1.style.display = ' none' ;
+
+
+  }
+</script>
+</body>
+</html>

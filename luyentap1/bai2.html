@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lấy nhiệt độ cơ thể</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập vào nhiệt độ cơ thể :');
+    while ( a < 20 || a > 100) {
+        if ( a < 20) {
+            alert('Bạn đang bị cảm cần tăng nhiệt độ !') ;
+            a = +prompt('Nhập vào nhiệt độ cơ thể :') ;
+        } else if ( a > 100 ) {
+            alert('Nhiệt độ quá cao, bạn có thể sẽ bị hấp hối. Nhập lại nhiệt độ !') ;
+            a = +prompt('Nhập vào nhiệt độ cơ thể :');
+        }
+    }alert('Nhiệt độ bình thường')
+
+
+</script>
+
+</body>
+</html>

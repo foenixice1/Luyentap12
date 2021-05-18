@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<p>Nhập vào số tiền gửi ngân hàng :</p>
+<input type="text" id="a" value="">
+<p>Nhập vào lãi suất % :</p>
+<input type="text" id="b" value="">
+<p>Nhập vào số tháng gửi :</p>
+<input type="text" id="c" value=""><br> <br>
+<button onclick="tinhlai()" >Tính lãi</button>
+<p id="kq"></p>
+<script>
+  let kq = document.getElementById("kq");
+  function tinhlai() {
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    let c = +document.getElementById("c").value;
+    let result = 0 ;
+    if ( isNaN(a) || isNaN(b) || isNaN(c)) {
+      kq.innerHTML = " Vui lòng nhập đúng từng mục !"
+    } else {
+         result = a*(Math.pow((1+b),c));
+      kq.innerHTML = 'Tiền lãi bạn phải trả cho ' + c + ' tháng là : ' +  result + ' VND' ;
+    }
+
+  }
+</script>
+</body>
+</html>

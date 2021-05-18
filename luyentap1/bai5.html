@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let a = 0 , b= 0, c=0
+    let f = "";
+    let tong = 0;
+    for (let i=0; i<20;i++){
+        if(i===0){
+            a=1
+            c=1
+            f += a+ " "
+            tong = tong + a
+        }else{
+            a= b+c
+            b = c
+            c = a
+            f += a+ " "
+            tong = tong + a
+            console.log( i +" = "+ tong)
+            }
+        }
+    document.write("Dãy Fibonacci là "+f+"<br>")
+    document.write( 'Tổng 20 số đầu tiên  =  ' + tong );
+</script>
+
+</body>
+</html>

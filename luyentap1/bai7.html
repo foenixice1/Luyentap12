@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<p id="in"></p>
+<script>
+    let kq = '' ;
+    for ( var i = 1 ; i < 100 ; i++) {
+        if ( i % 3 == 0 && i % 5 !==0 ) {
+            kq += 'Fizz '
+        }else if ( i % 5 ==0 && i % 3 !==0 ) {
+            kq += 'Buzz '
+        }else if (i % 3 == 0 && i % 5 == 0) {
+            kq += 'FizzBuzz '
+        }else {
+            kq += i + ' ;'
+        }
+        document.getElementById("in").innerHTML = kq  ;
+    }
+
+
+</script>
+</body>
+</html>
